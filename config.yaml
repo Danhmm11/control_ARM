@@ -1,0 +1,47 @@
+interface:
+  wifi_id: wlp3s0
+  wifi_password: 12345678
+  sender:
+    ip: 127.0.0.1
+    port: 65433
+  receiver:
+    ip: 127.0.0.28
+    port: 65432
+  arm_pick:
+    ip : 127.0.0.1
+    port : 65434
+  start_station:
+    ip : 127.0.0.1
+    port : 65435
+  AVG:
+    ip : 127.0.0.1
+    port : 65435
+capture:
+  resolution: [640, 480]
+arucomaker:
+  id1:      # start staion 
+    x: 400
+    y: 200
+    z: 99  
+  id2:     
+    x: 400
+    y: 400
+    z: 100   
+  id3:  
+    x: 400
+    y: 400
+    z: 100     
+  id4: 
+    x: 400
+    y: 400
+    z: 100    
+  id5:  
+    x: 400
+    y: 400
+    z: 100    
+  marker_size: 0.1
+detector:
+  divice: 'cuda:0'
+model:
+  model_config: yolov8_s_syncbn_fast_8xb16-500e_coco.py
+  model_checkpoint: best_coco_bbox_mAP_epoch_490.onnx
